@@ -16,29 +16,28 @@
             min-height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%);
             font-family: 'Quicksand', sans-serif;
-            overflow-x: hidden;
+            overflow: hidden;
             padding: 20px;
-            padding-bottom: 200px;
         }
 
         .container {
             text-align: center;
-            padding: 40px;
+            padding: 20px;
             position: relative;
             z-index: 1;
         }
 
         .photo-frame {
-            width: 280px;
-            height: 280px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             overflow: hidden;
-            margin: 0 auto 30px;
-            border: 8px solid white;
-            box-shadow: 0 20px 60px rgba(255, 105, 135, 0.4);
+            margin: 0 auto 20px;
+            border: 6px solid white;
+            box-shadow: 0 15px 40px rgba(255, 105, 135, 0.4);
             animation: float 3s ease-in-out infinite;
             position: relative;
         }
@@ -73,10 +72,10 @@
 
         .message {
             font-family: 'Dancing Script', cursive;
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             color: #ff6b6b;
             text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             animation: pulse 2s ease-in-out infinite;
         }
 
@@ -86,9 +85,9 @@
         }
 
         .sub-message {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: #555;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             opacity: 0;
             animation: fadeIn 1s ease forwards 0.5s;
         }
@@ -98,10 +97,10 @@
         }
 
         .date {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #ff9a9e;
             font-weight: 600;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
         }
 
         /* Hearts floating animation */
@@ -156,30 +155,13 @@
         }
 
         .love-quote {
-            margin-top: 20px;
+            margin-top: 10px;
             font-style: italic;
             color: #666;
-            font-size: 1.1rem;
+            font-size: 1rem;
             max-width: 400px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        /* Audio Player */
-        .audio-player {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 100;
-            background: rgba(255,255,255,0.95);
-            padding: 15px 25px;
-            border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(255, 105, 135, 0.3);
-        }
-
-        .audio-player audio {
-            width: 300px;
         }
 
         /* Welcome Overlay */
@@ -264,12 +246,10 @@
         <p class="love-quote">"Mỗi ngày bên em là một ngày tuyệt vời"</p>
     </div>
 
-    <!-- Audio Player -->
-    <div class="audio-player">
-        <audio id="bgMusic" controls autoplay loop>
-            <source src="babies-piano-354194.mp3" type="audio/mpeg">
-        </audio>
-    </div>
+    <!-- Hidden Audio Player -->
+    <audio id="bgMusic" loop style="display: none;">
+        <source src="babies-piano-354194.mp3" type="audio/mpeg">
+    </audio>
 
     <script>
         // Handle click to play music and show content
